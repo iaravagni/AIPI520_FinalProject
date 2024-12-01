@@ -61,6 +61,10 @@ We built an ensemble of:
 - **XGBoost**: An advanced gradient boosting framework for optimal performance on structured data.
 - **LightGBM**: Another advanced gradient boosting machine for optimal performance on structured data.
 
+![image](assets/individual_model_acc.png)
+
+![image](assets/ensemble_acc.png)
+
 ### **2. Deep Learning Model**
 We implemented a feedforward neural network using PyTorch:
 - **Architecture**: A fully connected network with 3 hidden layers of sizes [128, 64, 32].
@@ -68,9 +72,10 @@ We implemented a feedforward neural network using PyTorch:
 - **Optimization**: Adam optimizer with weight decay to prevent overfitting.
 - **Loss Function**: Binary Cross-Entropy Loss for probabilistic outputs.
 
+![image](assets/nn_cost.png)
+
 We conducted hyperparameter tuning (learning rates, layer sizes, dropout rates) and experimented with early stopping to enhance generalization.
 
----
 
 ## **Evaluation Strategy**
 Given the class imbalance, **AUROC** (Area Under the Receiver Operating Characteristic Curve) was chosen as the primary metric:
@@ -82,9 +87,9 @@ We employed 5-fold cross-validation to ensure that the models generalized well a
 ---
 
 ## **Results**
-- **Non-Deep Learning Model**: Delivered strong baseline performance, with XGBoost achieving the highest validation AUROC. However, since AUROC values for almost all models were higher than 0.62, decided to generate a weighted ensemble approach. Combining predictions from all models further boosted the model's robustness to 0.67 AUROC.
+- **Non-Deep Learning Model**: Delivered strong baseline performance, with XGBoost achieving the highest validation AUROC. However, since AUROC values for almost all models were higher than 0.62, decided to generate a weighted ensemble approach. Combining predictions from all models further boosted the model's robustness to ~0.67 AUROC with the top AUROC on the leaderboard being 0.7.
 
-- **Deep Learning Model**: Achieved slightly less AUROC (0.62) but required significant hyperparameter tuning and computational resources.
+- **Deep Learning Model**: Achieved slightly less AUROC (0.61) and it also required significant hyperparameter tuning and computational resources.
 
 ---
 

@@ -91,7 +91,21 @@ We employed 5-fold cross-validation to ensure that the models generalized well a
 
 - **Deep Learning Model**: Achieved slightly less AUROC (0.61) and it also required significant hyperparameter tuning and computational resources.
 
----
+
+## **Expected/Unexpected**
+- **Non-Deep Learning Model**: The models performed as expected, achieving AUROC close to 0.6 - 0.65 which aligns with the values on the leaderboard on which the highest is 0.7. Given the dataset's complexity and the methods employed (e.g., feature engineering, hyperparameter tuning), the results are within the anticipated range.
+
+![image](assets/leaderboard.png)
+
+- **Deep Learning Model**: The model performed below expectations, achieving AUROC of 0.61, which is lower than anticipated. This is most likely due to issues such as insufficient feature quality.
+
+## **What can be done to improve?**
+- **Address Class Imbalance**: Consider techniques like SMOTE or class weighting if thesince the dataset is imbalanced.
+
+- **Try More Models and Technqiues**: Test more algorithms, such as pre-trained deep learning models or include even more model in ensembling, to see if there’s an improvement.
+
+- **Enhance Feature Engineering**: Further explore new features or transformations (e.g., polynomial features, interaction terms) that may better capture the underlying patterns.
+
 
 ## **How to Run**
 To reproduce our results, follow the steps below:

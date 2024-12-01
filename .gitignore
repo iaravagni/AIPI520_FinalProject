@@ -4,3 +4,7 @@
 /data_format2
 sample_submission.csv
 /sets
+.gitignore
+notebooks/test.csv
+notebooks/train.csv
+/__pycache__
